@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Journal | LUMINA</title>
+
+    <meta name="description" content="Discover the inspiration behind Lumina, explore the art of jewelry and find little ways to make every moment shine.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER / MENÚ PRINCIPAL
+    ====================================== -->
+
+    <header class="encabezado">
+
+        <a href="index.html" class="logo">LUMINA</a>
+
+        <nav class="navegacion">
+            <a href="index.html">HOME</a>
+            <a href="Collection.html">COLLECTION</a>
+            <a href="OurStory.html">OUR STORY</a>
+            <a href="Journal.html">JOURNAL</a>
+        </nav>
+
+        <a href="Bag.html" class="bolsa">
+            BAG (<span id="bag-count">0</span>)
+        </a>
+
+    </header>
+
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+    ====================================== -->
+
+    <main class="journal-page">
+
+    
+
+        <!-- JOURNAL INTRODUCTION -->
+        <section class="journal-intro">
+
+            <p class="journal-label">THE LUMINA JOURNAL</p>
+
+            <h1>Stories That Shine</h1>
+
+            <p class="journal-description">
+                Discover the inspiration behind LUMINA, explore the art
+                of jewelry, and find little ways to make every moment shine.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURED ARTICLE -->
+        <section class="journal-featured">
+
+            <div class="journal-featured-image">
+                <img src="journal1.jpg" alt="The beauty of everyday elegance">
+            </div>
+
+            <div class="journal-featured-content">
+
+                <p class="journal-category">OUR PHILOSOPHY</p>
+
+                <h2>The Beauty of Everyday Elegance</h2>
+
+                <p>
+                    Jewelry is more than an accessory. It is a way to
+                    express who we are, celebrate meaningful moments,
+                    and find beauty in the little things.
+                </p>
+
+                <a href="#article-1" class="journal-read-more">
+                    Discover the Story &rarr;
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- JOURNAL ARTICLES -->
+        <section class="journal-articles" id="article-1">
+
+            <div class="journal-section-heading">
+
+                <p class="journal-label">EXPLORE OUR JOURNAL</p>
+
+                <h2>Inspiration &amp; Stories</h2>
+
+                <p>
+                    A closer look at the details, ideas, and inspiration
+                    that make every piece special.
+                </p>
+
+            </div>
+
+
+            <div class="journal-grid">
+
+                <!-- ARTICLE 1 -->
+                <article class="journal-card">
+
+                    <div class="journal-card-image">
+                        <img src="journal2.jpg" alt="The art of layering jewelry">
+                    </div>
+
+                    <div class="journal-card-content">
+
+                        <p class="journal-category">STYLE GUIDE</p>
+
+                        <h3>The Art of Layering Jewelry</h3>
+
+                        <p>
+                            Discover how to combine necklaces and create
+                            a look that feels personal, effortless, and timeless.
+                        </p>
+
+                        <a href="#article-1" class="journal-read-more">
+                            Read More &rarr;
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 2 -->
+                <article class="journal-card">
+
+                    <div class="journal-card-image">
+                        <img src="journal4.jpg" alt="Jewelry that tells your story">
+                    </div>
+
+                    <div class="journal-card-content">
+
+                        <p class="journal-category">INSPIRATION</p>
+
+                        <h3>Jewelry That Tells Your Story</h3>
+
+                        <p>
+                            From everyday essentials to meaningful gifts,
+                            discover the memories that make jewelry special.
+                        </p>
+
+                        <a href="#article-1" class="journal-read-more">
+                            Read More &rarr;
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICLE 3 -->
+                <article class="journal-card">
+
+                    <div class="journal-card-image">
+                        <img src="journal5.jpg" alt="Keep your favorite pieces shining">
+                    </div>
+
+                    <div class="journal-card-content">
+
+                        <p class="journal-category">JEWELRY CARE</p>
+
+                        <h3>Keep Your Favorite Pieces Shining</h3>
+
+                        <p>
+                            Simple habits can help you care for your jewelry
+                            and keep your favorite pieces looking beautiful.
+                        </p>
+
+                        <a href="#article-1" class="journal-read-more">
+                            Read More &rarr;
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    
+        <form action="https://formspree.io/f/xgaalzaz" method="POST">
+  <input type="email" name="email" required />
+  <textarea name="message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+
+
+
+        <!-- JOURNAL CLOSING -->
+        <section class="journal-closing">
+
+            <p class="journal-label">A LITTLE LUMINA INSPIRATION</p>
+
+            <h2>Find Beauty in the Details.</h2>
+
+            <p>
+                Every piece has a story. Make yours unforgettable.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script>
+    try {
+        const bolsa = JSON.parse(localStorage.getItem("lumina-bag")) || {};
+        let total = 0;
+        for (const id in bolsa) { total += bolsa[id]; }
+        document.getElementById("bag-count").textContent = total;
+    } catch (error) {
+        console.error(error);
+    }
+</script>
+
+</body>
+</html>

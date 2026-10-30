@@ -1,0 +1,3024 @@
+
+/* =========================================
+   LUMINA JEWELRY
+   Estilo: Minimalista, elegante y editorial
+   ========================================= */
+
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #FAF8F5;
+    --color-texto: #24211E;
+    --color-secundario: #82786F;
+    --color-acento: #B5A18A;
+    --color-linea: #E8E1D9;
+
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-textos: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+
+.encabezado {
+    width: 100%;
+    min-height: 95px;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid var(--color-linea);
+}
+
+
+/* LOGOTIPO */
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* MENÚ */
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.navegacion a {
+    position: relative;
+    padding: 8px 0;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Línea decorativa al pasar el cursor */
+
+.navegacion a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+}
+
+.navegacion a:hover {
+    color: var(--color-acento);
+}
+
+.navegacion a:hover::after {
+    width: 100%;
+}
+
+
+/* BOLSA DE COMPRAS */
+
+.bolsa {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.bolsa:hover {
+    color: var(--color-acento);
+}
+
+
+/* =========================================
+   3. SECCIÓN PRINCIPAL / HERO
+   ========================================= */
+
+.hero {
+    min-height: 620px;
+    padding: 65px 7% 75px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 7%;
+}
+
+
+/* CONTENEDOR DEL TEXTO */
+
+.hero-texto {
+    max-width: 480px;
+    padding: 20px 0;
+}
+
+
+/* TEXTO PEQUEÑO SUPERIOR */
+
+.etiqueta {
+    margin-bottom: 25px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+/* =========================================
+   4. INTRODUCCIÓN DE LA MARCA
+   ========================================= */
+
+.introduccion {
+    width: 100%;
+    padding: 120px 8%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+    border-bottom: 1px solid #E5DDD3;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* DETALLE DECORATIVO SUPERIOR */
+
+.introduccion::before {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background-color: #B5A18A;
+    margin-bottom: 35px;
+}
+
+/* ETIQUETA SUPERIOR */
+
+.introduccion .etiqueta {
+    margin-bottom: 25px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+
+    color: #8A7968;
+    text-transform: uppercase;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.introduccion h2 {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+
+    color: #29241F;
+}
+
+/* FRASE EN CURSIVA */
+
+.introduccion h2 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+
+/* DESCRIPCIÓN */
+
+.introduccion > p:last-child {
+    width: 100%;
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.2;
+    letter-spacing: 0.3px;
+
+    color: #766D65;
+}
+
+/* =========================================
+   INTRODUCCIÓN RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .introduccion {
+        padding: 85px 7%;
+    }
+
+    .introduccion::before {
+        margin-bottom: 28px;
+    }
+
+    .introduccion .etiqueta {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 22px;
+    }
+
+    .introduccion h2 {
+        font-size: clamp(40px, 9vw, 55px);
+        line-height: 1.08;
+        margin-bottom: 25px;
+    }
+
+    .introduccion > p:last-child {
+        max-width: 420px;
+        font-size: 11px;
+        line-height: 2;
+    }
+}
+/* =========================
+   LUMINA SOCIAL MEDIA
+========================= */
+
+.lumina-social {
+    padding: 75px 20px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.social-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.lumina-social h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.social-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 30px;
+    max-width: 450px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #b9a17a;
+    border-color: #b9a17a;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social-icons svg .social-dot {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-icons a[aria-label="Facebook"] svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-handle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+/* =========================================
+   5. PÁGINA COLLECTION
+   (pega este bloque al final de styles.css)
+   ========================================= */
+ 
+ 
+/* BACK TO HOME */
+ 
+.back-home {
+    padding: 35px 7% 0;
+}
+ 
+.back-home a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+ 
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+ 
+    color: var(--color-secundario);
+    transition: color 0.3s ease;
+}
+ 
+.back-home a:hover {
+    color: var(--color-acento);
+}
+ 
+.back-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+ 
+.back-home a:hover .back-arrow {
+    transform: translateX(-4px);
+}
+ 
+ 
+/* HERO DE COLLECTION */
+ 
+.collection-hero {
+    padding: 70px 7% 60px;
+    text-align: center;
+}
+ 
+.eyebrow {
+    margin-bottom: 20px;
+ 
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+ 
+    color: var(--color-secundario);
+}
+ 
+.collection-hero h1 {
+    margin-bottom: 20px;
+ 
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+ 
+.collection-hero p:last-child {
+    max-width: 440px;
+    margin: 0 auto;
+ 
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+ 
+    color: var(--color-secundario);
+}
+ 
+ 
+/* CUADRÍCULA DE PRODUCTOS */
+ 
+.collection-grid {
+    padding: 20px 7% 110px;
+ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 50px 30px;
+}
+ 
+ 
+/* TARJETA DE PRODUCTO */
+ 
+.collection-card {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.collection-image {
+    position: relative;
+    overflow: hidden;
+ 
+    aspect-ratio: 4 / 5;
+    background-color: #F1ECE5;
+}
+ 
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ 
+    transition: transform 0.6s ease;
+}
+ 
+.collection-card:hover .collection-image img {
+    transform: scale(1.04);
+}
+ 
+ 
+/* ETIQUETA (BESTSELLER / NEW ARRIVAL) */
+ 
+.product-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+ 
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+ 
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+ 
+ 
+/* BOTÓN ADD TO BAG */
+ 
+.quick-add {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+ 
+    font-family: var(--fuente-textos);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+ 
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    border: none;
+    cursor: pointer;
+ 
+    transform: translateY(100%);
+    transition: transform 0.4s ease, background-color 0.3s ease;
+}
+ 
+.collection-card:hover .quick-add,
+.quick-add:focus-visible {
+    transform: translateY(0);
+}
+ 
+.quick-add:hover {
+    background-color: var(--color-acento);
+}
+ 
+ 
+/* NOMBRE, MATERIAL Y PRECIO */
+ 
+.collection-info {
+    padding-top: 18px;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+ 
+.collection-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+ 
+.collection-info p {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--color-secundario);
+}
+ 
+.collection-price {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+ 
+ 
+/* RESPONSIVE */
+ 
+@media screen and (max-width: 700px) {
+ 
+    .collection-hero {
+        padding: 50px 7% 40px;
+    }
+ 
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 15px;
+    }
+ 
+    .collection-info {
+        flex-direction: column;
+        gap: 6px;
+    }
+ 
+    /* En celular no hay hover: el botón siempre se ve */
+    .quick-add {
+        transform: translateY(0);
+        padding: 12px;
+        font-size: 9px;
+    }
+}
+
+/* =========================================
+   6. PÁGINA OUR STORY
+   (pega este bloque al final de styles.css,
+   después del bloque de Collection)
+   ========================================= */
+ 
+ 
+/* HERO */
+ 
+.story-hero {
+    padding: 70px 7% 60px;
+    text-align: center;
+}
+ 
+.story-hero h1 {
+    margin-bottom: 30px;
+ 
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6.5vw, 82px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+ 
+.story-hero h1 em,
+.story-philosophy h2 em,
+.design-content h2 em,
+.values-heading h2 em,
+.story-closing h2 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+ 
+.story-intro {
+    max-width: 520px;
+    margin: 0 auto;
+ 
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.2;
+ 
+    color: var(--color-secundario);
+}
+ 
+ 
+/* IMAGEN PRINCIPAL */
+ 
+.story-image {
+    padding: 0 7% 100px;
+}
+ 
+.story-image img {
+    width: 100%;
+    height: clamp(280px, 50vw, 560px);
+    object-fit: cover;
+}
+ 
+ 
+/* FILOSOFÍA */
+ 
+.story-philosophy {
+    padding: 100px 7%;
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    align-items: start;
+ 
+    border-top: 1px solid var(--color-linea);
+}
+ 
+.story-heading h2,
+.design-content h2,
+.values-heading h2,
+.story-closing h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(38px, 4.5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+ 
+.story-text p,
+.design-content > p:not(.eyebrow) {
+    margin-bottom: 25px;
+ 
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2.1;
+ 
+    color: var(--color-secundario);
+}
+
+/* =========================================
+   VIDEO DE LA MARCA (Our Story)
+   (pega este bloque al final de styles.css)
+   ========================================= */
+
+.story-video {
+    padding: 100px 7%;
+    text-align: center;
+
+    border-top: 1px solid var(--color-linea);
+}
+
+.video-heading {
+    margin-bottom: 50px;
+}
+
+.video-heading h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(38px, 4.5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.video-heading h2 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+
+
+/* MARCO DEL VIDEO (proporción 16:9, se adapta a cualquier pantalla) */
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    aspect-ratio: 16 / 9;
+    padding: 12px;
+
+    background-color: #F1ECE5;
+    border: 1px solid #E5DDD3;
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+
+    border: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+
+    .story-video {
+        padding: 70px 6%;
+    }
+
+    .video-heading {
+        margin-bottom: 35px;
+    }
+
+    .video-frame {
+        padding: 6px;
+    }
+
+    .video-frame iframe {
+        top: 6px;
+        left: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+    }
+}
+ 
+ 
+/* DISEÑO (FOTO + TEXTO) */
+ 
+.story-design {
+    padding: 100px 7%;
+ 
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 7%;
+    align-items: center;
+ 
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+    border-bottom: 1px solid #E5DDD3;
+}
+ 
+.design-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+ 
+.design-content h2 {
+    margin-bottom: 30px;
+}
+ 
+ 
+/* VALORES */
+ 
+.story-values {
+    padding: 110px 7%;
+}
+ 
+.values-heading {
+    margin-bottom: 70px;
+    text-align: center;
+}
+ 
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+ 
+.value-card {
+    padding-top: 30px;
+    border-top: 1px solid var(--color-acento);
+}
+ 
+.value-number {
+    display: block;
+    margin-bottom: 20px;
+ 
+    font-family: var(--fuente-titulos);
+    font-size: 18px;
+    color: var(--color-acento);
+}
+ 
+.value-card h3 {
+    margin-bottom: 15px;
+ 
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: 500;
+}
+ 
+.value-card p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+ 
+    color: var(--color-secundario);
+}
+ 
+ 
+/* MENSAJE FINAL */
+ 
+.story-closing {
+    padding: 110px 7%;
+    text-align: center;
+ 
+    border-top: 1px solid var(--color-linea);
+}
+ 
+.story-closing h2 {
+    margin-bottom: 25px;
+    font-size: clamp(45px, 6vw, 76px);
+}
+ 
+.story-closing > p:not(.eyebrow) {
+    margin-bottom: 40px;
+ 
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+ 
+    color: var(--color-secundario);
+}
+ 
+.story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 6px;
+ 
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+ 
+    border-bottom: 1px solid var(--color-acento);
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+ 
+.story-link:hover {
+    color: var(--color-acento);
+    gap: 18px;
+}
+ 
+ 
+/* =========================================
+   7. FOOTER (se usa en todas las páginas)
+   ========================================= */
+ 
+.footer {
+    padding: 70px 7% 40px;
+    text-align: center;
+ 
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+ 
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+ 
+.footer > p:not(.copyright) {
+    margin-bottom: 35px;
+ 
+    font-size: 12px;
+    font-weight: 300;
+    color: #CFC6BC;
+}
+ 
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 35px;
+    margin-bottom: 50px;
+}
+ 
+.footer-links a {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+ 
+    transition: color 0.3s ease;
+}
+ 
+.footer-links a:hover {
+    color: var(--color-acento);
+}
+ 
+.copyright {
+    padding-top: 30px;
+ 
+    font-size: 9px;
+    letter-spacing: 2px;
+ 
+    color: #9A9087;
+    border-top: 1px solid #3D3833;
+}
+ 
+ 
+/* RESPONSIVE */
+ 
+@media screen and (max-width: 800px) {
+ 
+    .story-philosophy,
+    .story-design {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 7%;
+    }
+ 
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+ 
+    .story-image {
+        padding-bottom: 70px;
+    }
+ 
+    .story-values,
+    .story-closing {
+        padding: 80px 7%;
+    }
+}
+
+ /* =========================================
+   8. PÁGINA JOURNAL
+   (pega este bloque al final de styles.css,
+   después de los bloques de Collection y Our Story)
+   ========================================= */
+
+
+/* ETIQUETAS PEQUEÑAS */
+
+.journal-label,
+.journal-category {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+.journal-label {
+    margin-bottom: 20px;
+}
+
+.journal-category {
+    margin-bottom: 15px;
+}
+
+
+/* INTRODUCCIÓN */
+
+.journal-intro {
+    padding: 70px 7% 70px;
+    text-align: center;
+}
+
+.journal-intro h1 {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6.5vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.journal-description {
+    max-width: 480px;
+    margin: 0 auto;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* ARTÍCULO DESTACADO */
+
+.journal-featured {
+    margin: 0 7% 100px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+
+    background-color: #F1ECE5;
+    border: 1px solid #E5DDD3;
+}
+
+.journal-featured-image {
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.journal-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.journal-featured-content {
+    padding: 60px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.journal-featured-content h2 {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.journal-featured-content p:not(.journal-category) {
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* ENLACE "READ MORE" */
+
+.journal-read-more {
+    align-self: flex-start;
+    padding-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+.journal-read-more:hover {
+    color: var(--color-acento);
+}
+
+
+/* SECCIÓN DE ARTÍCULOS */
+
+.journal-articles {
+    padding: 0 7% 110px;
+}
+
+.journal-section-heading {
+    max-width: 560px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.journal-section-heading h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.journal-section-heading p:not(.journal-label) {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+}
+
+
+/* TARJETAS */
+
+.journal-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    background-color: #F1ECE5;
+}
+
+.journal-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.journal-card:hover .journal-card-image img {
+    transform: scale(1.04);
+}
+
+.journal-card-content {
+    padding-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.journal-card-content h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.journal-card-content p:not(.journal-category) {
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+
+    color: var(--color-secundario);
+}
+
+/* Empuja "Read More" siempre al fondo de la tarjeta */
+.journal-card-content .journal-read-more {
+    margin-top: auto;
+}
+
+
+/* MENSAJE FINAL */
+
+.journal-closing {
+    padding: 100px 7%;
+    text-align: center;
+
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+}
+
+.journal-closing h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.journal-closing p:not(.journal-label) {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-secundario);
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    .journal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .journal-featured {
+        grid-template-columns: 1fr;
+        margin-bottom: 70px;
+    }
+
+    .journal-featured-image {
+        min-height: 280px;
+    }
+
+    .journal-featured-content {
+        padding: 40px 25px;
+    }
+
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journal-articles {
+        padding-bottom: 80px;
+    }
+
+    .journal-closing {
+        padding: 75px 7%;
+    }
+}
+
+/* =========================================
+   LUMINA JEWELRY
+   Estilo: Minimalista, elegante y editorial
+   ========================================= */
+
+
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #FAF8F5;
+    --color-texto: #24211E;
+    --color-secundario: #82786F;
+    --color-acento: #B5A18A;
+    --color-linea: #E8E1D9;
+
+    --fuente-titulos: 'Cormorant Garamond', serif;
+    --fuente-textos: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-textos);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================= */
+
+.encabezado {
+    width: 100%;
+    min-height: 95px;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid var(--color-linea);
+}
+
+
+/* LOGOTIPO */
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+
+/* MENÚ */
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.navegacion a {
+    position: relative;
+    padding: 8px 0;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: color 0.3s ease;
+}
+
+
+/* Línea decorativa al pasar el cursor */
+
+.navegacion a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: var(--color-acento);
+    transition: width 0.3s ease;
+}
+
+.navegacion a:hover {
+    color: var(--color-acento);
+}
+
+.navegacion a:hover::after {
+    width: 100%;
+}
+
+
+/* BOLSA DE COMPRAS */
+
+.bolsa {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.bolsa:hover {
+    color: var(--color-acento);
+}
+
+
+/* =========================================
+   3. SECCIÓN PRINCIPAL / HERO
+   ========================================= */
+
+.hero {
+    min-height: 620px;
+    padding: 65px 7% 75px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 7%;
+}
+
+
+/* CONTENEDOR DEL TEXTO */
+
+.hero-texto {
+    max-width: 480px;
+    padding: 20px 0;
+}
+
+
+/* TEXTO PEQUEÑO SUPERIOR */
+
+.etiqueta {
+    margin-bottom: 25px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+
+/* TÍTULO DEL HERO (agregado) */
+
+.hero-texto h1 {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.hero-texto h1 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+
+.hero-descripcion {
+    max-width: 380px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* FOTOGRAFÍA DEL HERO (agregado) */
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+    max-height: 620px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   4. INTRODUCCIÓN DE LA MARCA
+   ========================================= */
+
+.introduccion {
+    width: 100%;
+    padding: 120px 8%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+    border-bottom: 1px solid #E5DDD3;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* DETALLE DECORATIVO SUPERIOR */
+
+.introduccion::before {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 1px;
+
+    background-color: #B5A18A;
+    margin-bottom: 35px;
+}
+
+/* ETIQUETA SUPERIOR */
+
+.introduccion .etiqueta {
+    margin-bottom: 25px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+
+    color: #8A7968;
+    text-transform: uppercase;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.introduccion h2 {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+
+    color: #29241F;
+}
+
+/* FRASE EN CURSIVA */
+
+.introduccion h2 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+
+/* DESCRIPCIÓN */
+
+.introduccion > p:last-child {
+    width: 100%;
+    max-width: 480px;
+
+    margin: 0 auto;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.2;
+    letter-spacing: 0.3px;
+
+    color: #766D65;
+}
+
+/* =========================================
+   INTRODUCCIÓN RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 7% 55px;
+    }
+
+    .introduccion {
+        padding: 85px 7%;
+    }
+
+    .introduccion::before {
+        margin-bottom: 28px;
+    }
+
+    .introduccion .etiqueta {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 22px;
+    }
+
+    .introduccion h2 {
+        font-size: clamp(40px, 9vw, 55px);
+        line-height: 1.08;
+        margin-bottom: 25px;
+    }
+
+    .introduccion > p:last-child {
+        max-width: 420px;
+        font-size: 11px;
+        line-height: 2;
+    }
+}
+
+
+/* =========================
+   LUMINA SOCIAL MEDIA
+========================= */
+
+.lumina-social {
+    padding: 75px 20px;
+    text-align: center;
+    font-family: var(--fuente-textos);
+}
+
+.social-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.lumina-social h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.social-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 30px;
+    max-width: 450px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #b9a17a;
+    border-color: #b9a17a;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social-icons svg .social-dot {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-icons a[aria-label="Facebook"] svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-handle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+/* =========================================
+   5. PÁGINA COLLECTION
+   (pega este bloque al final de styles.css)
+   ========================================= */
+
+
+/* BACK TO HOME */
+
+.back-home {
+    padding: 35px 7% 0;
+}
+
+.back-home a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    color: var(--color-secundario);
+    transition: color 0.3s ease;
+}
+
+.back-home a:hover {
+    color: var(--color-acento);
+}
+
+.back-arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.back-home a:hover .back-arrow {
+    transform: translateX(-4px);
+}
+
+
+/* HERO DE COLLECTION */
+
+.collection-hero {
+    padding: 70px 7% 60px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+.collection-hero h1 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.collection-hero p:last-child {
+    max-width: 440px;
+    margin: 0 auto;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* CUADRÍCULA DE PRODUCTOS */
+
+.collection-grid {
+    padding: 20px 7% 110px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 50px 30px;
+}
+
+
+/* TARJETA DE PRODUCTO */
+
+.collection-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-image {
+    position: relative;
+    overflow: hidden;
+
+    aspect-ratio: 4 / 5;
+    background-color: #F1ECE5;
+}
+
+.collection-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.collection-card:hover .collection-image img {
+    transform: scale(1.04);
+}
+
+
+/* ETIQUETA (BESTSELLER / NEW ARRIVAL) */
+
+.product-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+/* BOTÓN ADD TO BAG */
+
+.quick-add {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+
+    font-family: var(--fuente-textos);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    border: none;
+    cursor: pointer;
+
+    transform: translateY(100%);
+    transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+.collection-card:hover .quick-add,
+.quick-add:focus-visible {
+    transform: translateY(0);
+}
+
+.quick-add:hover {
+    background-color: var(--color-acento);
+}
+
+
+/* NOMBRE, MATERIAL Y PRECIO */
+
+.collection-info {
+    padding-top: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.collection-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.collection-info p {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--color-secundario);
+}
+
+.collection-price {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 700px) {
+
+    .collection-hero {
+        padding: 50px 7% 40px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 15px;
+    }
+
+    .collection-info {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* En celular no hay hover: el botón siempre se ve */
+    .quick-add {
+        transform: translateY(0);
+        padding: 12px;
+        font-size: 9px;
+    }
+}
+/* =========================================
+   6. PÁGINA OUR STORY
+   (pega este bloque al final de styles.css,
+   después del bloque de Collection)
+   ========================================= */
+
+
+/* HERO */
+
+.story-hero {
+    padding: 70px 7% 60px;
+    text-align: center;
+}
+
+.story-hero h1 {
+    margin-bottom: 30px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6.5vw, 82px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.story-hero h1 em,
+.story-philosophy h2 em,
+.design-content h2 em,
+.values-heading h2 em,
+.story-closing h2 em {
+    font-weight: 400;
+    color: #9B826A;
+}
+
+.story-intro {
+    max-width: 520px;
+    margin: 0 auto;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.2;
+
+    color: var(--color-secundario);
+}
+
+
+/* IMAGEN PRINCIPAL */
+
+.story-image {
+    padding: 0 7% 100px;
+}
+
+.story-image img {
+    width: 100%;
+    height: clamp(280px, 50vw, 560px);
+    object-fit: cover;
+}
+
+
+/* FILOSOFÍA */
+
+.story-philosophy {
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    align-items: start;
+
+    border-top: 1px solid var(--color-linea);
+}
+
+.story-heading h2,
+.design-content h2,
+.values-heading h2,
+.story-closing h2 {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(38px, 4.5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.story-text p,
+.design-content > p:not(.eyebrow) {
+    margin-bottom: 25px;
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* DISEÑO (FOTO + TEXTO) */
+
+.story-design {
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 7%;
+    align-items: center;
+
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+    border-bottom: 1px solid #E5DDD3;
+}
+
+.design-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.design-content h2 {
+    margin-bottom: 30px;
+}
+
+
+/* VALORES */
+
+.story-values {
+    padding: 110px 7%;
+}
+
+.values-heading {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.value-card {
+    padding-top: 30px;
+    border-top: 1px solid var(--color-acento);
+}
+
+.value-number {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 18px;
+    color: var(--color-acento);
+}
+
+.value-card h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.value-card p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+
+    color: var(--color-secundario);
+}
+
+
+/* MENSAJE FINAL */
+
+.story-closing {
+    padding: 110px 7%;
+    text-align: center;
+
+    border-top: 1px solid var(--color-linea);
+}
+
+.story-closing h2 {
+    margin-bottom: 25px;
+    font-size: clamp(45px, 6vw, 76px);
+}
+
+.story-closing > p:not(.eyebrow) {
+    margin-bottom: 40px;
+
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    color: var(--color-secundario);
+}
+
+.story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+
+    border-bottom: 1px solid var(--color-acento);
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.story-link:hover {
+    color: var(--color-acento);
+    gap: 18px;
+}
+
+
+/* =========================================
+   7. FOOTER (se usa en todas las páginas)
+   ========================================= */
+
+.footer {
+    padding: 70px 7% 40px;
+    text-align: center;
+
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer > p:not(.copyright) {
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    font-weight: 300;
+    color: #CFC6BC;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 35px;
+    margin-bottom: 50px;
+}
+
+.footer-links a {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-acento);
+}
+
+.copyright {
+    padding-top: 30px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #9A9087;
+    border-top: 1px solid #3D3833;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 800px) {
+
+    .story-philosophy,
+    .story-design {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 7%;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .story-image {
+        padding-bottom: 70px;
+    }
+
+    .story-values,
+    .story-closing {
+        padding: 80px 7%;
+    }
+}
+/* =========================================
+   8. PÁGINA JOURNAL
+   (pega este bloque al final de styles.css,
+   después de los bloques de Collection y Our Story)
+   ========================================= */
+
+
+/* ETIQUETAS PEQUEÑAS */
+
+.journal-label,
+.journal-category {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+.journal-label {
+    margin-bottom: 20px;
+}
+
+.journal-category {
+    margin-bottom: 15px;
+}
+
+
+/* INTRODUCCIÓN */
+
+.journal-intro {
+    padding: 70px 7% 70px;
+    text-align: center;
+}
+
+.journal-intro h1 {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6.5vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.journal-description {
+    max-width: 480px;
+    margin: 0 auto;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* ARTÍCULO DESTACADO */
+
+.journal-featured {
+    margin: 0 7% 100px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+
+    background-color: #F1ECE5;
+    border: 1px solid #E5DDD3;
+}
+
+.journal-featured-image {
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.journal-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.journal-featured-content {
+    padding: 60px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.journal-featured-content h2 {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.journal-featured-content p:not(.journal-category) {
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* ENLACE "READ MORE" */
+
+.journal-read-more {
+    align-self: flex-start;
+    padding-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+.journal-read-more:hover {
+    color: var(--color-acento);
+}
+
+
+/* SECCIÓN DE ARTÍCULOS */
+
+.journal-articles {
+    padding: 0 7% 110px;
+}
+
+.journal-section-heading {
+    max-width: 560px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.journal-section-heading h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.journal-section-heading p:not(.journal-label) {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 30px;
+}
+
+
+/* TARJETAS */
+
+.journal-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    background-color: #F1ECE5;
+}
+
+.journal-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.journal-card:hover .journal-card-image img {
+    transform: scale(1.04);
+}
+
+.journal-card-content {
+    padding-top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.journal-card-content h3 {
+    margin-bottom: 15px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.journal-card-content p:not(.journal-category) {
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2;
+
+    color: var(--color-secundario);
+}
+
+/* Empuja "Read More" siempre al fondo de la tarjeta */
+.journal-card-content .journal-read-more {
+    margin-top: auto;
+}
+
+
+/* MENSAJE FINAL */
+
+.journal-closing {
+    padding: 100px 7%;
+    text-align: center;
+
+    background-color: #F1ECE5;
+    border-top: 1px solid #E5DDD3;
+}
+
+.journal-closing h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.journal-closing p:not(.journal-label) {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-secundario);
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    .journal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .journal-featured {
+        grid-template-columns: 1fr;
+        margin-bottom: 70px;
+    }
+
+    .journal-featured-image {
+        min-height: 280px;
+    }
+
+    .journal-featured-content {
+        padding: 40px 25px;
+    }
+
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journal-articles {
+        padding-bottom: 80px;
+    }
+
+    .journal-closing {
+        padding: 75px 7%;
+    }
+}
+/* =========================================
+   9. PÁGINA BAG
+   (pega este bloque al final de styles.css,
+   después de los bloques anteriores)
+   ========================================= */
+
+
+/* Hace que el atributo "hidden" siempre funcione */
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ENCABEZADO DE LA BOLSA */
+
+.bag-header {
+    padding: 70px 7% 60px;
+    text-align: center;
+}
+
+.bag-label {
+    margin-bottom: 20px;
+
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: var(--color-secundario);
+}
+
+.bag-header h1 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: clamp(45px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.bag-header p:last-child {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    color: var(--color-secundario);
+}
+
+
+/* BOLSA VACÍA */
+
+.bag-empty {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px 7% 130px;
+    text-align: center;
+}
+
+.bag-icon {
+    margin-bottom: 25px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 54px;
+    line-height: 1;
+
+    color: var(--color-acento);
+}
+
+.bag-empty h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.bag-empty p {
+    margin-bottom: 40px;
+
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 2.1;
+
+    color: var(--color-secundario);
+}
+
+
+/* BOTÓN PRINCIPAL (Explore Collection / Checkout) */
+
+.bag-button {
+    display: inline-block;
+    padding: 17px 40px;
+
+    font-family: var(--fuente-textos);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.bag-button:hover {
+    background-color: var(--color-acento);
+}
+
+
+/* BOLSA CON PRODUCTOS */
+
+.bag-layout {
+    padding: 0 7% 120px;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr;
+    gap: 6%;
+    align-items: start;
+}
+
+
+/* PRODUCTO EN LA BOLSA */
+
+.bag-item {
+    padding: 30px 0;
+
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 25px;
+    align-items: start;
+
+    border-bottom: 1px solid var(--color-linea);
+}
+
+.bag-item:first-child {
+    padding-top: 0;
+}
+
+.bag-item-image {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+
+    background-color: #F1ECE5;
+}
+
+.bag-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bag-item-info h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.bag-item-info p {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    font-weight: 300;
+
+    color: var(--color-secundario);
+}
+
+
+/* CANTIDAD (+ / −) */
+
+.bag-item-qty {
+    display: inline-flex;
+    align-items: center;
+
+    border: 1px solid var(--color-linea);
+}
+
+.bag-item-qty span {
+    min-width: 40px;
+    text-align: center;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.qty-btn {
+    width: 36px;
+    height: 36px;
+
+    font-family: var(--fuente-textos);
+    font-size: 16px;
+
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+.qty-btn:hover {
+    color: var(--color-acento);
+}
+
+
+/* PRECIO Y QUITAR */
+
+.bag-item-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+}
+
+.bag-item-price {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.bag-item-remove {
+    padding-bottom: 3px;
+
+    font-family: var(--fuente-textos);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-linea);
+    color: var(--color-secundario);
+    cursor: pointer;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.bag-item-remove:hover {
+    color: var(--color-acento);
+    border-color: var(--color-acento);
+}
+
+
+/* RESUMEN DE COMPRA */
+
+.bag-summary {
+    padding: 40px 35px;
+
+    background-color: #F1ECE5;
+    border: 1px solid #E5DDD3;
+}
+
+.bag-summary h2 {
+    margin-bottom: 30px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.summary-row {
+    padding: 14px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    border-bottom: 1px solid #E5DDD3;
+}
+
+.summary-total {
+    margin-bottom: 30px;
+
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.bag-checkout {
+    width: 100%;
+}
+
+.bag-note {
+    margin-top: 20px;
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    color: var(--color-secundario);
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 850px) {
+
+    .bag-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .bag-item {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .bag-item-side {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* =========================================
+   10. RESPONSIVE + MENÚ HAMBURGUESA
+   (pega este bloque AL FINAL de styles.css,
+   después de todos los demás)
+   ========================================= */
+
+
+/* El botón hamburguesa NO se ve en escritorio */
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* TABLET Y CELULAR: aparece el menú hamburguesa */
+
+@media screen and (max-width: 900px) {
+
+    .encabezado {
+        position: relative;
+        flex-wrap: nowrap;
+        min-height: 80px;
+        padding: 18px 6%;
+        gap: 20px;
+    }
+
+    .logo {
+        order: 1;
+        margin-right: auto;
+        font-size: 26px;
+        letter-spacing: 4px;
+    }
+
+    .bolsa {
+        order: 2;
+    }
+
+    /* BOTÓN HAMBURGUESA */
+
+    .menu-toggle {
+        order: 3;
+        width: 40px;
+        height: 40px;
+        padding: 0 8px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background-color: var(--color-texto);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Se convierte en una X al abrirse */
+
+    .menu-toggle.abierto span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.abierto span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.abierto span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* MENÚ DESPLEGABLE */
+
+    .navegacion {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        max-height: 0;
+        overflow: hidden;
+
+        background-color: var(--color-fondo);
+        border-bottom: 1px solid var(--color-linea);
+
+        transition: max-height 0.4s ease;
+    }
+
+    .navegacion.abierto {
+        max-height: 320px;
+    }
+
+    .navegacion a {
+        padding: 18px 0;
+        text-align: center;
+
+        font-size: 11px;
+        letter-spacing: 2px;
+
+        border-top: 1px solid var(--color-linea);
+    }
+
+    .navegacion a::after {
+        display: none;
+    }
+}
+
+
+/* CELULAR */
+
+@media screen and (max-width: 520px) {
+
+    .encabezado {
+        padding: 16px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .collection-hero,
+    .story-hero,
+    .journal-intro,
+    .bag-header {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .collection-grid {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .collection-info h3 {
+        font-size: 19px;
+    }
+}
+
+
+/* PANTALLAS TÁCTILES (no tienen hover):
+   el botón ADD TO BAG siempre se ve */
+
+@media (hover: none) {
+
+    .quick-add {
+        transform: translateY(0);
+    }
+}
+
+ styles · CSS
+/* =========================================
+   MAPA DE UBICACIÓN
+   (pega este bloque al final de styles.css)
+   ========================================= */
+ 
+.social-map {
+    max-width: 900px;
+    margin: 55px auto 0;
+    padding: 0 5%;
+}
+ 
+.social-map iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+ 
+    border: 1px solid var(--color-linea);
+}
+ 
+@media screen and (max-width: 520px) {
+ 
+    .social-map {
+        margin-top: 40px;
+    }
+ 
+    .social-map iframe {
+        height: 280px;
+    }
+}
+ 
