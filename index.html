@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +33,7 @@
         <a href="index.html" class="logo">LUMINA</a>
 
         <!-- NAVEGACIÓN -->
-        <nav class="navegacion">
+        <nav class="navegacion" id="menu-principal">
 
             <a href="index.html">HOME</a>
 
@@ -42,7 +43,6 @@
 
             <a href="Journal.html">JOURNAL</a>
 
-        
         </nav>
 
         <!-- BOLSA DE COMPRAS -->
@@ -50,12 +50,16 @@
             BAG (<span id="bag-count">0</span>)
         </a>
 
+        <!-- BOTÓN HAMBURGUESA (solo se ve en celular) -->
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Open menu" aria-expanded="false"
+                aria-controls="menu-principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
-
-
-    <!-- =====================================
-         CONTENIDO PRINCIPAL
-    ====================================== -->
 
     <main>
 
@@ -159,6 +163,7 @@
 
                 </a>
 
+
                 <!-- WHATSAPP -->
                 <a href="https://wa.me/5215523006850"
                    target="_blank"
@@ -168,10 +173,9 @@
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M3 21l1.65-4.9A9 9 0 1 1 8 19.4L3 21z"/>
                         <path d="M9.2 8.1c-.4.7-.2 1.8.6 3.1 1 1.7 2.4 2.9 4 3.5 1 .4 1.7.2 2.1-.4l.3-.6-1.9-1.1-.8.6c-.9-.4-1.7-1.1-2.2-2l.6-.8-1.1-1.9-.6.3z"/>
-                     </svg>
+                    </svg>
 
                 </a>
-
 
             </div>
 
@@ -196,6 +200,23 @@
 
     </main>
 
+    <!-- BOTÓN FLOTANTE DE WHATSAPP
+         (para cambiar el número: edita los dígitos después de wa.me/
+          para cambiar el mensaje: edita el texto después de ?text=) -->
+    <a href="https://wa.me/5215523006850?text=Hi%20Lumina!%20I%27d%20like%20to%20know%20more%20about%20your%20jewelry."
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with Lumina on WhatsApp">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 21l1.65-4.9A9 9 0 1 1 8 19.4L3 21z"/>
+            <path d="M9.2 8.1c-.4.7-.2 1.8.6 3.1 1 1.7 2.4 2.9 4 3.5 1 .4 1.7.2 2.1-.4l.3-.6-1.9-1.1-.8.6c-.9-.4-1.7-1.1-2.2-2l.6-.8-1.1-1.9-.6.3z"/>
+        </svg>
+
+    </a>
+
+    <!-- SCRIPT: CONTADOR DE LA BOLSA -->
     <script>
         try {
             const bolsa = JSON.parse(localStorage.getItem("lumina-bag")) || {};
@@ -204,6 +225,20 @@
             document.getElementById("bag-count").textContent = total;
         } catch (error) {
             console.error(error);
+        }
+    </script>
+
+    <!-- SCRIPT: MENÚ HAMBURGUESA -->
+    <script>
+        const botonMenu = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu-principal");
+
+        if (botonMenu && menu) {
+            botonMenu.addEventListener("click", function () {
+                const abierto = menu.classList.toggle("abierto");
+                botonMenu.classList.toggle("abierto", abierto);
+                botonMenu.setAttribute("aria-expanded", abierto);
+            });
         }
     </script>
 
